@@ -1,55 +1,27 @@
-// const mdLinks = require('./index.js');
+const { read } = require('../src/readDir.js')
 
+jest.mock(read);
 
-// describe('mdLinks', () => {
-//   describe('Se o caminho do arquivo é um diretório')
-//     it('deve rejeitar com uma mensagem de erro', () => {
-//       const pathFile = '.folder'
-//       const options = {validate:false};
-//       const resultado = mdLinks(pathFile, options);
+beforeEach(() => {
+    jest.clearAllMocks();
+});
 
-      
-//       expect(resultado).toBe();
-//     });
-
-//   describe('Se não for encontrado nenhum link no caminho fornecido'){
-//     it('deve rejeitar com uma mensagem de erro', () => {
-//       const pathFile = '.folder/arquiv2.md'
-//       const options = {};
-//       const resultado = mdLinks(pathFile, options);
-//     })
-
-//     expect(resultado).toBe();
-//     //pode colocar console.log dentro do toBe?
-//   }
-
-//   describe('Se o arquivo fornecido for markdown e com links'){
-//     it('deve retornar o array de objetos', () => {
-//       const pathFile = '.folder/arquiv.md'
-//       const options = {};
-//       const resultado = mdLinks(pathFile, options);
-//       const arrayObj = [{},{},{}]
-//     })
-
-//     expect(resultado).toBe();
-    
-//   }
-
-//   describe('Se a opção validate for inserida')
-//   it('deve rejeitar com uma mensagem de erro', () => {
-//     const pathFile = '.folder/arquiv.md'
-//     const options = {};
-//     const resultado = mdLinks(pathFile, options);
-//     expect();
-//   })
-
-
-
-
-
-
-
-
-// });
-
+describe('Função mdLinks', () => {
+    it('deve verificar se é um array' , () => {
+        
+        const path = './arquivoteste';
+        const options = {
+            validate: true,
+        }
+        expect(read).toHaveBeenCalledTimes(1);
+    })
+    it('deve chamar a função read' , () => {
+        
+        const path = './arquivoteste';
+        const options = {
+            validate: true,
+        }
+        expect(read).toHaveBeenCalledTimes(1);
+    })
+});
 
