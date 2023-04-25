@@ -1,4 +1,4 @@
-const { read, readFile, readDirectory } = require("../readDir.js");
+const { read, readFile, readDirectory } = require("../src/readDir.js");
 const fs = require('fs');
 jest.mock('fs', () => ({
     promises: {
