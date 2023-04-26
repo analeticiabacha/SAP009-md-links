@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const mdLinks = require('./src/index.js');
 const chalk = require('chalk');
-const stats  = require('./src/stats.js');
+const stats  = require('./src/links.js');
 const typedPath = process.argv[2];
 const options = {
   validate: process.argv.includes('--validate'),
@@ -64,6 +64,6 @@ mdLinks(typedPath, options)
   })
   .catch((erro) => {
     if (erro.code === 'ENOENT') {
-      
     }
+    console.log(erro.message);
   });

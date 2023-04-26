@@ -1,5 +1,6 @@
 const path = require('path');
 const fs = require('fs');
+const {ERROR_FILE_NOT_MD}  = require('./erro.js');
 
 function readDirectory(dir){ //fazer ifelse, if nenhum dir tem ext .md...return n achei nada, reject, ser promise
     //resolve meus arq md
@@ -22,6 +23,10 @@ function readDirectory(dir){ //fazer ifelse, if nenhum dir tem ext .md...return 
 }
 
 function readFile(file){
+    const isMd = path.extname(file) === '.md';
+    if(!isMd){
+        return Promise.reject(ERROR_FILE_NOT_MD);
+    }
     return fs.promises.readFile(file).then((data) => {
         return {file: file, data: data.toString()}
     }); 
@@ -37,4 +42,8 @@ function read(pathFile){
         }
     })
 }
-module.exports = {read, readFile, readDirectory};
+module.exports = {
+    read, 
+    readFile, 
+    readDirectory
+};
