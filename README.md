@@ -28,8 +28,8 @@ Quarto projeto desenvolvido para o bootcamp da [@Laboratória](https://www.labor
 ## Índice
 
 * [1. Prefácio](#1-prefacio) 🗒️
-* [2. Fluxograma](#2-fluxograma)
-* [3. Instalação](#3-Instalação)
+* [2. Fluxograma](#2-fluxograma) 📄
+* [3. Instalação](#3-Instalação) 🔽
 * [4. Terminal e seus comandos](#4-Terminal-e-seus-comandos)💻
 * [5. Testes](#5-testes) 📊
 * [6. Checklists de Objetivos Alcançados](#6-checklist-de-objetivos-alcançados) 🏆
@@ -52,22 +52,51 @@ Nesse projeto, criou-se uma ferramenta, usando Node.js, que le e analise arquivo
 ***
 ## Instalação
 
-* `npm install md-links-analeticia`
+*  `npm install md-links-analeticia`
 
 ***
 ## Terminal e seus comandos
 O usuário que utilizar a ferramenta desenvolvida, poderá localizar os links em um arquivo de interesse com o comando abaixo:
-* `md-links caminho-do-arquivo`
-<img alt="Ferramenta utilizada no caminho de arquivo "./folder/arquivo.md"" width="550" src="https://user-images.githubusercontent.com/30864314/234978996-f6188a16-c883-4d90-9588-1de94dd23d71.png"/><br>
+* `md-links caminho-do-arquivo` </br>
+  </br><img alt="Ferramenta utilizada no caminho de arquivo ./folder/arquivo.md" width="850" src="https://user-images.githubusercontent.com/30864314/234978996-f6188a16-c883-4d90-9588-1de94dd23d71.png" /><br>
 
 
+A segunda possibilidade de uso é inserir o comando --validate após o caminho do arquivo, para que assim a ferramenta informe os links que estão com erros.
+* `md-links caminho-do-arquivo --validate` </br>
+
+  </br><img alt="Exemplo da funcionalidade --validate" width="850" src="https://user-images.githubusercontent.com/30864314/234980216-6f70014b-01d5-476b-a074-116069da493a.png" /><br>
+
+A terceira funcionalidade, é verificar informações resumidas sobre os links, acrescentando o comando --stats:
+* `md-links caminho-do-arquivo --stats` </br>
+  </br><img alt="Exemplo da funcionalidade --stats" width="850" src="https://user-images.githubusercontent.com/30864314/234982314-546f4234-56c8-4c32-b41d-6f818a069077.png" /><br>
+
+Também é possível utilizar as duas opções acima, juntas:
+* `md-links caminho-do-arquivo --stats --validate` </br>
+</br><img alt="Exemplo da funcionalidade --stats" width="850" src="https://user-images.githubusercontent.com/30864314/234982693-e24db545-29f1-42fd-96a9-7b49a1132be2.png" /><br>
+
+A ferramenta está apta a tratar os erros, exemplo:
+1) O usário digita um arquivo sem extensão .md:
+* `md-links caminho-do-arquivo-semMd` </br>
+2) O usuário insere um arquivo vazio:
+* `md-links caminho-do-arquivo-vazio` </br>
+
+</br><img alt="Exemplo de tratativas de erros" width="850" src="https://user-images.githubusercontent.com/30864314/234984506-bb1bba85-4dfe-4d55-b42f-d51534ae079e.png" /><br>
 
 ***
 ## Testes
 
-Em andamento.
+A aplicação foi finalizada com 100% de cobertura nos testes:
+</br><img alt="Testes realizados" width="850" src="https://user-images.githubusercontent.com/30864314/234985111-987b3567-60b7-4795-b2c6-737ba93f7c94.png" /><br>
 
 ***
-## Checklists de Objetivos Alcançados
+## Checklists de Objetivos Alcançados 🏆
 
-Em andamento.
+- [:star2:] Possui CLI.
+- [:star2:] É instalável.
+- [:star2:] Passa pelo linter.
+- [:star2:] Passa pelos testes (npm test).
+- [:star2:] Inclui fluxograma de estudos e tomada de decisões no README.md.
+- [:star2:] Inclui uma definição de produto clara e informativa no README.md.
+- [:star2:] Testes unitários cobrem um mínimo de 70% de statements, functions, lines e branches.
+- [:star2:] Package.json: deve possuir nome, versão, descrição, autor, licença, dependências e scripts (pretest, test e etc).
+
