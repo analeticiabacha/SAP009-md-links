@@ -52,12 +52,15 @@ Nesse projeto, criou-se uma ferramenta, usando Node.js, que le e analise arquivo
 ***
 ## Instalação
 
-Em andamento.
+* `npm install md-links-analeticia`
 
 ***
 ## Terminal e seus comandos
+O usuário que utilizar a ferramenta desenvolvida, poderá localizar os links em um arquivo de interesse com o comando abaixo:
+* `md-links caminho-do-arquivo`
+<img alt="Ferramenta utilizada no caminho de arquivo "./folder/arquivo.md"" width="550" src="https://user-images.githubusercontent.com/30864314/234978996-f6188a16-c883-4d90-9588-1de94dd23d71.png"/><br>
 
-Em andamento.
+
 
 ***
 ## Testes
