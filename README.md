@@ -87,7 +87,7 @@ A ferramenta está apta a tratar os erros, exemplo:
 ## Testes
 
 A aplicação foi finalizada com 100% de cobertura nos testes:
-</br><img alt="Testes realizados" width="850" src="https://user-images.githubusercontent.com/30864314/234985111-987b3567-60b7-4795-b2c6-737ba93f7c94.png" /><br>
+</br><img alt="Testes realizados" width="850" src="https://user-images.githubusercontent.com/30864314/235223588-ac4981ad-8b1d-4638-a11c-16c9e2038f9f.png" /><br>
 
 ***
 ## Checklists de Objetivos Alcançados 🏆
