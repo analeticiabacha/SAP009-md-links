@@ -1,11 +1,13 @@
 ## 1. Oi, deu certo!
 
 Está aparecendo!
-[links1](https://www.google.com.br/)
-[links10](https://www.instagram.com)
-[links3](https://www.linkedin.com)
-[links4](https://www.linkedin.com/nãoexiste)
-[links2](https://www.github.com)
+[Google](https://www.google.com.br/)
+[Instagram](https://www.instagram.com)
+[Linkedin](https://www.linkedin.com)
+[Linkedin](https://www.linkedin.com/nãoexiste)
+[Github](https://www.github.com)
+[Nodejs](https://nodejs.org/en)
+[Trello](https://trello.com)
 
 
 

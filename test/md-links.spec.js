@@ -1,54 +1,26 @@
 const { read } = require('../src/readDir.js')
+const { validate, getLinks } = require('../src/links.js');
+const mdlinks = require('../src/mdlinks.js');
 
-jest.mock(read);
+jest.mock('../src/readDir.js');
+jest.mock('../src/links.js');
 
 beforeEach(() => {
     jest.clearAllMocks();
 });
 
 describe('Função mdLinks', () => {
-    it('deve verificar se é um array' , () => {
+    it('deve validar os objetos de links' , () => {
+      const mockRead = [{}, {}];
+      read.mockResolvedValueOnce(mockRead);
+      const mockGetLinks = [];
+      getLinks.mockResolvedValueOnce(mockGetLinks);
 
-      mockData = 'Conteúdo do arquivo' 
-
-      mockResultRead = [{
-        file: './arquivoTeste',
-        data: mockData
-      }]
-
-      jest.mock(read, () => mockResultRead );
-
-      read.mockResolvedValue(mockResultRead)
-
-        const path = './folder';
-        const options = {
-            validate: true,
-        }
-        const resultado =  [
-           {
-          href: 'https://www.link.com',
-          text: 'Texto qualquer',
-          file: 'folder\\FILE.md'
-        }
-      ]
-
-        return mdLinks(path, options).then(result=>{
-
-          expect(result).toEqual(resultado);
-          expect(read).toHaveBeenCalledTimes(1);
-          expect(read).toHaveBeenCalledWith(path);
-          
-
-        })
-        
-    })
-
-    it('deve chamar a função read' , () => {
-        
-        const path = './arquivoteste';
-        const options = {
-            validate: true,
-        }
+      const pathFile = 'arquivoqualquer';
+      return mdlinks(pathFile, {}).then(() => {
         expect(read).toHaveBeenCalledTimes(1);
-    })
+        expect(read).toHaveBeenCalledWith(pathFile);
+        expect(getLinks).toHaveBeenCalledTimes(2);
+      });
+    });
 });

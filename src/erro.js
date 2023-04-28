@@ -2,14 +2,16 @@
 const chalk = require('chalk');
 
 const MSG_EMPTY_FILE = 'Não há links nesse arquivo!';
-const ERROR_FILE_NOT_MD = new Error('O arquivo fornecido não é .md');
+const ERROR_FILE_NOT_MD = new Error(chalk.red('\u2717') + chalk.red(' O arquivo fornecido não é .md'));
+const MSG_LINK_NOT_FOUND = 'Link não encontrado!';
+const MSG_LINK_ERROR = 'Erro no link';
 
 function handleError(err){
     if (err.code === 'ENOTFOUND') {
-        const msgError = 'Link não encontrado!';
+        const msgError = MSG_LINK_NOT_FOUND;
         return msgError;
     } else {
-        const msgError = 'Erro no link!';
+        const msgError = MSG_LINK_ERROR;
         return msgError;
     }
 }
@@ -20,4 +22,10 @@ function fileEmpty(file){
     return erro;
 }
 
-module.exports = { handleError, fileEmpty, ERROR_FILE_NOT_MD };
+module.exports = { 
+    handleError, 
+    fileEmpty, 
+    ERROR_FILE_NOT_MD,
+    MSG_LINK_NOT_FOUND,
+    MSG_LINK_ERROR,
+ };
