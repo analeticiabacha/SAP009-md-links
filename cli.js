@@ -1,7 +1,7 @@
 #!/usr/bin/env node
-const mdLinks = require('./src/index.js');
+const mdLinks = require('./src/mdlinks.js');
 const chalk = require('chalk');
-const stats  = require('./src/links.js');
+const { stats }  = require('./src/links.js');
 const typedPath = process.argv[2];
 const options = {
   validate: process.argv.includes('--validate'),
